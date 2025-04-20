@@ -24,7 +24,11 @@ jobs:
         run: |
           echo "Running lint checks..."
           flake8 . --exclude .gitignore
+      - run : |
+          pwd
+          ls
+        
       - name: Run tests with pytest
         run: |
           echo "Running tests..."
-          pytest
+          pytest app/
